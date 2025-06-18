@@ -1,115 +1,93 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>Tropicália</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#7ba23f" />
+  <title>Projeto Agrinho</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-    <header class=" p-5">
+  <header id="header">
+    <img src="image-48-1024x613.png" alt="Logo Agrinho" class="logo" />
+    <h1>Projeto Agrinho</h1>
+    <nav>
+      <a href="#intro">Início</a>
+      <a href="#objetivos">Objetivos</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+      <button id="theme-toggle" aria-label="Alternar tema">🌙</button>
+    </nav>
+  </header>
 
-        <nav class="container d-flex justify-content-between align-items-center">
-            <img src="img/logo.png" alt="Logotipo da Tropicália" class="nav-img " loading="lazy">
-            <ul class="nav mt-5">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-            </ul>          
-        </nav>
-       
-    </header>
+  <main>
+    <!-- Hero Section com imagem de fundo -->
+    <section id="intro" class="panel reveal hero">
+      <div class="overlay">
+        <h2>Educação Ambiental e Cidadania</h2>
+        <p>Inspire seus alunos a cuidar do planeta com boas práticas no campo e na cidade.</p>
+        <button id="learn-more">Saiba Mais</button>
+      </div>
+    </section>
 
+    <!-- Objetivos com ícones/imagens -->
+    <section id="objetivos" class="panel grid reveal">
+      <h2>Objetivos do Agrinho</h2>
+      <div class="card">
+        <img src="6066682-caminho-escuro-na-floresta-paisagem-verde-fundo-da-floresta-foto.jpeg" alt="Educação Ambiental" />
+        <h3>Educação Ambiental</h3>
+        <p>Projetos que levam sustentabilidade para dentro da sala de aula.</p>
+      </div>
+      <div class="card">
+        <img src="imagens-da-floresta-tropical-n9mfe78i1uc8kw3g.jpg" alt="Cidadania Ativa" />
+        <h3>Cidadania Ativa</h3>
+        <p>Incentivo a ações de voluntariado e participação social.</p>
+      </div>
+      <div class="card">
+        <img src="pexels-photo-975771.jpeg" alt="Valorização Rural" />
+        <h3>Valorização Rural</h3>
+        <p>Resgate cultural e econômico das comunidades do campo.</p>
+      </div>
+    </section>
 
-    <main class="container my-5">
+    <!-- Galeria de Fotos -->
+    <section id="galeria" class="panel reveal">
+      <h2>Galeria de Sustentabilidade</h2>
+      <div class="gallery">
+        <img src="5b07ea98-floresta-amazonica-1024x682.jpg" alt="Foto 1" />
+        <img src="BR_SACR101101_D004.jpeg" alt="Foto 2" />
+        <img src="floresta_amazonica211016ebc0667.webp" alt="Foto 3" />
+        <img src="floresta-6sk40qqvtlt496ub.jpg" alt="Foto 4" />
+      </div>
+    </section>
 
-        <section id="inicio" class="my-5">
-            <div class="inicio-fundo d-flex justify-content-between align-items-center">
-                <div class="esquerda-conteudo">
-                    <h1 class="display-4 text-white fst-italic fw-bold">Boas-vindas a</h1>
-                    <img src="img/logo-2.png" alt="Logotipo secundário da Tropicália" class="mb-3" width="563"
-                        height="278" loading="lazy">
-                    <a href="#tropicalia"
-                        class="btn btn-primary btn-lg botao-inicio fw-semibold">Quero
-                        conhecer!</a>
-                </div>
+    <section id="contato" class="panel reveal">
+      <h2>Fale Conosco</h2>
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <label for="name">Nome</label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="field">
+          <label for="message">Mensagem</label>
+          <textarea id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+        <p id="form-status" class="status"></p>
+      </form>
+    </section>
+  </main>
 
-            </div>
-        </section>
+  <button id="back-to-top" aria-label="Voltar ao topo">↑</button>
 
-        <section id="tropicalia" class="my-5 pt-6 secao-tropicalia">
-            <div class="container d-flex align-items-center ">
-                  <div class="col-5">
-                    <h2>O que foi a Tropicália?</h2>
-                    <p class="p-2">A Tropicália, também conhecida como Tropicalismo, foi um movimento cultural
-                        brasileiro que surgiu na década de 1960, tendo seu auge entre 1967 e 1968. Esse movimento
-                        abrangeu várias expressões artísticas, como a música, o cinema, o teatro e as artes plásticas, e
-                        teve como principal característica a mistura de elementos da cultura brasileira tradicional com
-                        influências estrangeiras, especialmente do rock e da música pop.</p>
-                </div>
-            </div>
-        </section>
+  <footer>
+    © 2025 Programa Agrinho – Sicredi
+  </footer>
 
-        <section id="galeria">
-            <h2 class="text-center pt-5">Galeria</h2>
-            <div class="container p-3 mt-3 fundo-galeria ">
-
-                <div class="row justify-content-md-center">
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Jorge_Ben_e_o_Trio_Mocotó_no_Teatro_da_Lagoa,_1971.tif.jpg"
-                            class="img-fluid rounded-5" loading="lazy">
-                    </div>
-                    <div class="col-md-4">
-                        <img src="img/lossy-page1-640px-Os_Mutantes_2.tif.jpg" class="img-fluid rounded-5"
-                            loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contato">
-            <div class="container p-5 d-flex justify-content-center">
-                <div class="col-md-8 col-lg-10 rounded-5 formulario"> <!-- Caixa do formulário com 60% de largura -->
-                    <h2 class="mb-3">Entre em contato</h2>
-                    <form>
-                        <div class="form-group mb-3">
-                            <label for="nome">Nome</label>
-                            <input type="text" id="nome" name="nome" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu nome completo">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-3 mt-1"
-                                placeholder="Digite seu email">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea id="mensagem" name="mensagem" class="form-control rounded-4 mt-2" rows="4"
-                                placeholder="Escreva sua mensagem"></textarea>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-primary btn-lg rounded-pill tamanho-botao">Enviar
-                                mensagem</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="text-center p-3 fst-italic">
-        <p>Acesse nossas redes:</p>
-        <i class="bi bi-whatsapp"></i>
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-tiktok"></i>
-        <p class="mt-3">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
-    </footer>
-    <script src="script.js"></script>
-
+  <script src="script.js" defer></script>
 </body>
-
 </html>
